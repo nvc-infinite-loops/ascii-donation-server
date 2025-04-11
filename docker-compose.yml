@@ -1,0 +1,6 @@
+services:
+    asciidonation:
+        ports:
+            - 13131:13131
+        restart: always
+        image: asciidonation
