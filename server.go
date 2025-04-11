@@ -16,9 +16,9 @@ func main() {
         Msg: "Server Start!"
     };
 
-    http.HandleFunc("/donate", func(w http.ResponseWriter, r * http.Request) {
+    http.HandleFunc("/donate", func(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintf(w, string(lebufur.Msg));
-        err: = json.NewDecoder(r.Body).Decode( & lebufur); //Decode request
+        err: = json.NewDecoder(r.Body).Decode(&lebufur); //Decode request
         if (err != nil) {
             log.Panic("Could not read input!", err);
         }
